@@ -27,7 +27,7 @@ colnames(SS)[1] <- "Subject"
 ```
 =================================================================
 
-To make a single, full data set, I then proceeded to merge the `XX` predictors data set, `YY` outcome data set and `SS` subject id data set. The rationale for using column bind is that the columns in each of the three data sets are different so binding essentially puts all the columns next to each other with matching number of observations found in the rows. By column binding, this essentially produced a wide data set. 
+To make a single, full data set, I then proceeded to merge the `XX` predictors data set, `YY` outcome data set and `SS` subject id data set. The rationale for using column bind is that the columns in each of the three data sets are different so binding essentially puts all the columns next to each other with matching number of observations found in the rows. By column binding, this essentially produced a wider data set. 
 
 ```{r}
 mergeALL <- cbind(XX,YY,SS)
