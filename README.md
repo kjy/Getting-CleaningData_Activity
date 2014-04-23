@@ -5,9 +5,8 @@ Summary of run_analysis.R
 
 The run_analysis.R script relies on the zip drive that contains the following data: the `features` data that gives the labels for the predictors, the `activity labels` data that gives the column names for the outcome variable, and 2 additional folders, namely the `train` data set and the `test` data set. Within each of these 2 folders, there are 3 additional data files: the `subject` id participant data, the predictors data `X`, and the outcome data `Y`. A description of the feature selection and their estimates can be found in the `features info` file, which is also in the zip drive.
 
-=================================================================
-
 After downloading and reading in the above data files, I took a look at the NAs in the predictors dataset and saw there were 561 missing observations. I chose to leave these missing obserations in the dataset since I could filter them out later, using the na.omit().
+
 =================================================================
 
 A key step was to merge the data sets across train and test groups. Across each group, the  column dimensions were the same. The training datas set had more observations with 7342 while the test data sets 2947 observations.Binding by row across similar data sets, I ran the following code, where data1 and data4 are the `X` data sets for train and test, each respectively. Similarly data2 and data5 are the `Y` data sets. And finally, data3 and data6 are the `subject` data sets:
