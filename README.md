@@ -1,5 +1,4 @@
 
-
 Summary of run_analysis.R
 ===============================================================
 
@@ -36,6 +35,7 @@ mergeALL <- cbind(XX,YY,SS)
 ```
 =================================================================
 To extract only the measurements on the mean and standard deviation for each predictor measurement, I used regular expression, specifcally the grep command to find the indexes of the column names in the merged data set called `mergeALL`. These indexes were combined and sorted and saved in a vector. The Subject and Activity columns along with the predictors that have mean and standard deviation measurements were column bound to a new dataset, called `data2`.
+The decision was made to exclude predictors that had mean frequency since the instructions specifically stated to extract the predictors that had mean and standard deviation.
 
 ```{r}
 tally1 <-grep("mean\\(",colnames(mergeALL))
@@ -72,4 +72,4 @@ I then created a second, independent tidy data set with the average of each vari
 molten = melt(na.omit(data2), id.vars=c("Activity", "Subject"))
 ActivityData <- dcast(molten, Subject + Activity ~ variable, mean)
 ```
-
+The tidy data set captures the `Activity Data` and is written out to a file as `tidy data`.
