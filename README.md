@@ -1,6 +1,5 @@
 
 
-
 Summary of run_analysis.R
 ===============================================================
 
@@ -8,8 +7,7 @@ The run_analysis.R script relies on the zip drive that contains the following da
 
 =================================================================
 
-After downloading and reading in the above data files, I took a look at the NAs in the predictors dataset and saw there were 561 missing observations. I chose to leave these NAs
-in the dataset since I could filter them out later, using the na.omit().
+After downloading and reading in the above data files, I took a look at the NAs in the predictors dataset and saw there were 561 missing observations. I chose to leave these missing obserations in the dataset since I could filter them out later, using the na.omit().
 =================================================================
 
 A key step was to merge the data sets across train and test groups. Across each group, the  column dimensions were the same. The training datas set had more observations with 7342 while the test data sets 2947 observations.Binding by row across similar data sets, I ran the following code, where data1 and data4 are the `X` data sets for train and test, each respectively. Similarly data2 and data5 are the `Y` data sets. And finally, data3 and data6 are the `subject` data sets:
